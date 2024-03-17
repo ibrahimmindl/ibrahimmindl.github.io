@@ -318,13 +318,25 @@
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <form action="https://api.web3forms.com/submit" method="POST">
+                     <form action="https://api.web3forms.com/submit" method="POST" id="request" class="main_form">
                         <input type="hidden" name="access_key" value="3842de64-6677-4d8d-a7e7-2e718c4af4be">
-                        <input type="text" name="name" required>
-                        <input type="email" name="email" required>
-                        <input type="text" name="message" required>
-                        <button type="submit">Send</button>
-                   
+                        <div class="row">
+                           <div class="col-md-12 ">
+                              <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                           </div>
+                           <div class="col-md-12">
+                              <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                           </div>
+                           <div class="col-sm-12">
+                              <button class="send_btn">Send</button>
+                           </div>
+                        </div>
                      </form>
                   </div>
                </div>
