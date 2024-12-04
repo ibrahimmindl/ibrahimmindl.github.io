@@ -321,23 +321,92 @@
                      <form action="https://api.web3forms.com/submit" method="POST" id="request" class="main_form">
                         <input type="hidden" name="access_key" value="3842de64-6677-4d8d-a7e7-2e718c4af4be">
                         <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="contactus" placeholder="Full Name" type="type" name="Full Name"required> 
-                           </div>
-                           <div class="col-md-12">
-                              <input class="contactus" placeholder="Email" type="type" name="Email"required> 
-                           </div>
-                           <div class="col-md-12">
-                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"required>                          
-                           </div>
-                           <div class="col-md-12">
-                              <textarea class="textarea" placeholder="Message" name="Message" required></textarea>
-                           </div>                           
-                           <div class="col-sm-12">
-                              <button class="send_btn">Send</button>
-                           </div>
+                            <div class="col-md-12">
+                                <input class="contactus" placeholder="Full Name" type="text" name="Full Name" required> 
+                            </div>
+                            <div class="col-md-12">
+                                <input class="contactus" placeholder="Email" type="email" name="Email" required> 
+                            </div>
+                            <div class="col-md-12">
+                                <input class="contactus" placeholder="Phone Number" type="text" name="Phone Number" required>                          
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="textarea" placeholder="Message" name="Message" required></textarea>
+                            </div>  
+                    
+                            <!-- CAPTCHA: Simple Math Challenge -->
+                            <div class="col-md-12">
+                                <label for="captcha">What is <span id="num1"></span> + <span id="num2"></span>?</label>
+                                <input type="text" id="captcha" placeholder="Answer" required class="contactus">
+                            </div>
+                    
+                            <div class="col-md-12">
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">  
+                            </div>                       
+                    
+                            <div class="col-sm-12">
+                                <button type="submit" class="send_btn">Send</button>
+                            </div>
                         </div>
-                     </form>
+                    </form>
+
+                    <!-- CSS for Styling the CAPTCHA -->
+<style>
+   .captcha-question {
+       font-size: 18px;
+       font-weight: bold;
+       color: #333;
+       margin-bottom: 10px;
+       display: inline-block;
+       font-family: 'Arial', sans-serif;
+   }
+   
+   .captcha-num {
+       font-size: 20px;
+       color: #007bff;
+       font-weight: bold;
+   }
+   
+   .captcha-input {
+       padding: 10px;
+       font-size: 16px;
+       width: 100%;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       margin-top: 5px;
+       font-family: 'Arial', sans-serif;
+   }
+   
+   .captcha-input:focus {
+       border-color: #007bff;
+       outline: none;
+   }
+   </style>
+                    
+                    <!-- JavaScript for CAPTCHA Logic -->
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const num1 = Math.floor(Math.random() * 10);
+                        const num2 = Math.floor(Math.random() * 10);
+                        const correctAnswer = num1 + num2;
+                    
+                        // Display the numbers in the CAPTCHA question
+                        document.getElementById("num1").textContent = num1;
+                        document.getElementById("num2").textContent = num2;
+                    
+                        const form = document.getElementById("request");
+                    
+                        form.addEventListener("submit", function (event) {
+                            const userAnswer = parseInt(document.getElementById("captcha").value, 10);
+                    
+                            if (userAnswer !== correctAnswer) {
+                                event.preventDefault(); // Stop form submission
+                                alert("Incorrect CAPTCHA answer. Please try again.");
+                            }
+                        });
+                    });
+                    </script>
+                    
                   </div>
                </div>
             </div>
