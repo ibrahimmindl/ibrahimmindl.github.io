@@ -3,25 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="new.js"></script> <!-- Link to external JS file -->
     <link rel="stylesheet" href="new.css"> <!-- Link to external CSS file -->
 </head>
 <body>
-    <div class="typing-test-container">
-        <h2 class="typing-test-title">Typing Test</h2>
-        <p class="typing-test-instructions">Type the text below as quickly and accurately as you can.</p>
-        <div class="typing-test-box">
-            <p id="text-to-type" class="text-to-type">
-                The quick brown fox jumps over the lazy dog.
-            </p>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../pages/index.html" class="logo">RedSea-Media</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="../ibrahimmindl.github.io/images/dji_fly_20241115_201102_0012_1731706426714_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>See life through a professional lens.</h1>
+            <p>Scrole to reveal</p>
         </div>
-        <textarea id="typing-input" class="typing-input" placeholder="Start typing here..." oninput="startTypingTest()" autofocus></textarea>
-        <div class="typing-test-results">
-            <p>Words Per Minute (WPM): <span id="wpm-count">0</span></p>
-            <p>Accuracy: <span id="accuracy-count">100%</span></p>
-        </div>
+    </section>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <h2>My Video</h2>
+        <p>This is a video of me demonstrating a project. Watch it below:</p>
+        <a href="https://www.youtube.com/watch?v=lmV3wZKh4b4" target="_blank" class="video-link">
+            <div class="video-thumbnail-container">
+                <img src="https://img.youtube.com/vi/lmV3wZKh4b4/maxresdefault.jpg" alt="Watch my video" class="video-thumbnail">
+                <div class="youtube-logo">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </div>
+            </div>
+        </a>
     </div>
 
-    <script src="new.js"></script> <!-- Link to external JS file -->
+    <div class="instagram-feed-section">
+        <h2>Check Out My Instagram Feed</h2>
+        <div class="elfsight-app-267f08db-33f6-48b4-a5aa-27275e5bc15d" data-elfsight-app-lazy></div>
+    </div>
+
+    <!-- New Sections -->
+    <section id="clients" class="content-section">
+        <h2>Our Clients</h2>
+        <p>
+            Our films connect people with your business. We've completed many video production projects 
+            for leading Sudan and international brands in sectors like manufacturing, technology, advertising, 
+            tourism, and education.
+        </p>
+    </section>
+
+    <section id="work" class="content-section">
+        <h2>Our Work</h2>
+        <p>
+            We can help you attract new customers, share your message with other companies, and engage employees. 
+            Whatever you do, video can communicate it like nothing else.
+        </p>
+        <button class="btn-primary">Tell us what you need</button>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>Who Are We?</h2>
+        <p>
+            We're award-winning specialists in film production and animation, based in Khartoum and working 
+            across Sudan from Darfur to Dongola. Our team includes expert producers, editors, camera operators, 
+            motion designers, and drone pilots – all the skills needed to turn your brief into high-quality 
+            creative work.
+        </p>
+    </section>
+
+    <footer id="contact" class="footer">
+        <h2>Get in Touch</h2>
+        <p>Contact us today and find out how we can help your business succeed.</p>
+        <p>
+            Phone: +249901944704<br>
+            Email: <a href="mailto:farispoetry@gmail.com">farispoetry@gmail.com</a><br>
+            Facebook Messenger: <a href="#">Message Us</a>
+        </p>
+        <button class="btn-secondary">Start a New Project</button>
+    </footer>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com/ibrahim_mindl?igsh=Z2pkdDV5aG9oeWV2" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/ibrahim-ishag-a6400525a/?originalSubdomain=au" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/ibrahim_mindl?igsh=Z2pkdDV5aG9oeWV2" target="_blank">
+            <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/ibrahim_mindl?igsh=Z2pkdDV5aG9oeWV2" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/ibrahim_mindl?igsh=Z2pkdDV5aG9oeWV2" target="_blank">
+            <ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- for instagram feed -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+    <!-- ScrollReveal Animation -->
+    <script>
+        ScrollReveal().reveal('.content-section, .video-section', {
+            delay: 200,
+            distance: '50px',
+            duration: 800,
+            easing: 'ease-in-out',
+            origin: 'bottom'
+        });
+    </script>
 </body>
 </html>
