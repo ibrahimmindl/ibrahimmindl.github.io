@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="new.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="typing-test-container">
+        <h2 class="typing-test-title">Typing Test</h2>
+        <p class="typing-test-instructions">Type the text below as quickly and accurately as you can.</p>
+        <div class="typing-test-box">
+            <p id="text-to-type" class="text-to-type">
+                The quick brown fox jumps over the lazy dog.
+            </p>
+        </div>
+        <textarea id="typing-input" class="typing-input" placeholder="Start typing here..." oninput="startTypingTest()" autofocus></textarea>
+        <div class="typing-test-results">
+            <p>Words Per Minute (WPM): <span id="wpm-count">0</span></p>
+            <p>Accuracy: <span id="accuracy-count">100%</span></p>
+        </div>
+    </div>
+
+    <script src="new.js"></script> <!-- Link to external JS file -->
+</body>
+</html>
