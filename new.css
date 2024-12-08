@@ -1,74 +1,3 @@
-.typing-test-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.typing-test-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #333;
-}
-
-.typing-test-instructions {
-    font-size: 1rem;
-    text-align: center;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.typing-test-box {
-    padding: 10px;
-    background-color: #e9e9e9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.text-to-type {
-    font-size: 1.2rem;
-    color: #333;
-    text-align: center;
-    line-height: 1.5;
-}
-
-.typing-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    min-height: 100px;
-    box-sizing: border-box;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.typing-input:focus {
-    border-color: #4A90E2;
-}
-
-.typing-test-results {
-    text-align: center;
-    font-size: 1rem;
-    color: #333;
-}
-
-.typing-test-results span {
-    font-weight: bold;
-    color: #4A90E2;
-}
-
-
-
-
-
-
 /* General Reset */
 * {
     margin: 0;
@@ -79,8 +8,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f4f4f4;
+    color: #ff0000;
+    background: #2a1e36;
     overflow-x: hidden;
 }
 
@@ -89,26 +18,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background: #333;
     color: #fff;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #f44336;
+    color: #22a46c;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navbar .logo:hover {
-    color: #ff5722;
 }
 
 .nav-links {
@@ -123,12 +46,11 @@ body {
     font-weight: bold;
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .nav-links a:hover {
-    background: #f44336;
-    color: #fff;
+    background: #ff1100;
 }
 
 /* Hero Section */
@@ -136,10 +58,13 @@ body {
     position: relative;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
 }
 
 #background-video {
@@ -153,12 +78,12 @@ body {
 }
 
 .hero-content {
-    animation: fadeIn 1.5s ease;
+    z-index: 1;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
@@ -169,110 +94,110 @@ body {
 
 /* Video Section */
 .video-section {
-    max-width: 900px;
-    margin: 40px auto;
+    padding: 50px 20px;
     text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #000000;
+    color: #22a46c;
+}
+
+
+
+.video-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.video-link {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
     transition: transform 0.3s ease;
 }
 
-.video-section:hover {
-    transform: scale(1.02);
-}
-
-.video-thumbnail-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.video-thumbnail-container:hover {
+.video-link:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.youtube-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: #f44336;
-    opacity: 0.8;
-}
-
-/* Content Section */
-.content-section {
-    padding: 40px 20px;
-    background: #f9f9f9;
-    margin: 20px 0;
+.video-thumbnail {
+    width: 100%;
+    max-width: 600px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: slideUp 1s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.instagram-feed-section {
+    padding: 30px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 8000px;
+    margin: 40px auto;
+    text-decoration-color: #22a46c;
+}
+
+.instagram-feed-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.elfsight-app-267f08db-33f6-48b4-a5aa-27275e5bc15d {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Content Sections */
+.content-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #2a1e36;
 }
 
 .content-section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+    margin-bottom: 15px;
+    color: #22a46c;
 }
 
 .content-section p {
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;
 }
 
-/* Buttons */
 .btn-primary, .btn-secondary {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 5px;
+    color: #fff;
+    background: #22a46c;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease;
 }
 
-.btn-primary {
-    background: #f44336;
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background: #e53935;
-    transform: translateY(-3px);
-}
-
-.btn-secondary {
-    background: #333;
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background: #555;
-    transform: translateY(-3px);
+.btn-primary:hover, .btn-secondary:hover {
+    background: #ff0000;
 }
 
 /* Footer */
 .footer {
-    padding: 20px;
+    padding: 30px 20px;
     background: #333;
     color: #fff;
     text-align: center;
-    border-radius: 10px 10px 0 0;
 }
 
 .footer a {
-    color: #000000;
+    color: #f44336;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -285,62 +210,68 @@ body {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 15px;
+    padding: 240px 0;
 }
 
 .social-icons a {
+    color: #22a46c;
     font-size: 1.5rem;
-    color: #333;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
     color: #f44336;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        padding: 70px;
+        font-size: 0.9rem;
     }
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.5rem;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
     }
 }
 
 
 
-/* Global background for sections you want to have a darker color */
-body {
-    background-color: #ffffff; /* Dark background for the entire body */
-}
 
 
-.portfolio, .contact, .testimonials {
-    background-color: #4f4a4a; /* Dark background for portfolio, contact, and testimonial sections */
-}
-
-/* End Section with Darker Tone */
-.video-section {
-    background-color: #101010; /* Even darker background for the footer section */
-}
-
-/* You can also apply it for any additional sections */
-.some-other-section {
-    background-color: #111111; /* Another custom dark tone */
-}
